@@ -17,7 +17,7 @@ import java.util.List;
 public class OkHttpSentinelInterceptor implements Interceptor {
 
 
-    static final String Prefix = "RPC:";
+    static final String Prefix = "RPC://";
     //static final String Referer = "Referer";
     static final MediaType JsonMediaType = MediaType.parse("application/json; charset=utf-8");
     public OkHttpSentinelInterceptor() {
@@ -30,16 +30,16 @@ public class OkHttpSentinelInterceptor implements Interceptor {
         HttpUrl uri = request.url();
         //String referer = request.header(Referer);
 
-        String hostWithPathResource = Prefix
+        String hostWithPathResource = Prefix;
                 //+ request.method().toUpperCase() + ":"
-                + uri.scheme() + "://" + uri.host()
-                + (uri.port() == -1 ? "" : ":" + uri.port());
+                //+ uri.scheme() + "://" + uri.host()
+                //+ (uri.port() == -1 ? "" : ":" + uri.port());
 
         //处理uri.pathSegments()，拼到hostWithPathResource后
         List<String> pathList = uri.pathSegments();
         if(pathList != null && pathList.size() > 0){
             for(String path:pathList){
-                hostWithPathResource += "/"+path;
+                hostWithPathResource += path; //"/"+
             }
         }
 

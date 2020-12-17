@@ -6,7 +6,7 @@
 
     <groupId>cn.weiecho</groupId>
     <artifactId>sentinel-client</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <description>sentinel流控组建包</description>
 
