@@ -37,7 +37,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.10</lombok.version>
         <alibaba.sentinel.version>1.7.2</alibaba.sentinel.version>
-        <springframework.version>5.2.1.RELEASE</springframework.version>
+        <springframework.version>5.3.18</springframework.version>
     </properties>
 
     <dependencies>
